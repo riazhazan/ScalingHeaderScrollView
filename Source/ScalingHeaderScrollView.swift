@@ -201,11 +201,11 @@ public struct ScalingHeaderScrollView<Header: View, Content: View>: View {
             .onAppear {
                 snapInitialScrollPosition()
             }
-            if showPullToLoadMoreProgress {
-                progressView
-                    .opacity(pullToLoadOpacity)
-                    .offset(y: globalGeometry.size.height - 60)
-            }
+//            if showPullToLoadMoreProgress {
+//                progressView
+//                    .opacity(pullToLoadOpacity)
+//                    .offset(y: globalGeometry.size.height - 60)
+//            }
         }
     }
 
