@@ -26,8 +26,9 @@ final class ScalingHeaderScrollViewDelegate: NSObject, ObservableObject, UIScrol
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         didScroll()
         let maxYOffset = scrollView.contentSize.height - scrollView.bounds.height
-        if scrollView.contentOffset.y >= maxYOffset {
+        if scrollView.contentOffset.y >= maxYOffset - 200 {
             didReachBottom()
+            //didPullToLoadMore ()
         }
     }
     
@@ -40,9 +41,9 @@ final class ScalingHeaderScrollViewDelegate: NSObject, ObservableObject, UIScrol
             didPullToRefresh()
         }
         let maxYOffset = scrollView.contentSize.height - scrollView.bounds.height
-        if scrollView.contentOffset.y > maxYOffset + 60 {
-            didPullToLoadMore()
-        }
+        // if scrollView.contentOffset.y > maxYOffset + 60 {
+        //     didPullToLoadMore()
+        // }
 
         didEndDragging()
     }
