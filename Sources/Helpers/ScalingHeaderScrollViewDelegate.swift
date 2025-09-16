@@ -27,8 +27,8 @@ final class ScalingHeaderScrollViewDelegate: NSObject, ObservableObject, UIScrol
         didScroll()
         let maxYOffset = scrollView.contentSize.height - scrollView.bounds.height
         if scrollView.contentOffset.y >= maxYOffset - 200 {
-            didReachBottom()
-            //didPullToLoadMore ()
+            //didReachBottom()
+            didPullToLoadMore ()
         }
     }
     
